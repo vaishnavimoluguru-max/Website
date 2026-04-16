@@ -1,0 +1,55 @@
+// script.js
+
+// No complex JavaScript is strictly required for this template's core functionality.
+// However, you can add features like smooth scrolling for navigation links,
+// or a simple image modal for the gallery if desired.
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Smooth scrolling for navigation links
+    const navLinks = document.querySelectorAll('header nav a[href^="#"]');
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+    // --- Placeholder for potential future enhancements ---
+    // For example, if you wanted to implement a simple image lightbox:
+    /*
+    const galleryImages = document.querySelectorAll('.gallery-item img');
+    const modal = document.getElementById('image-modal'); // You'd need to create this in HTML
+    const modalImg = document.getElementById('modal-image'); // You'd need to create this in HTML
+
+    if (modal && modalImg) {
+        galleryImages.forEach(img => {
+            img.addEventListener('click', () => {
+                modal.style.display = "block";
+                modalImg.src = img.src;
+                modalImg.alt = img.alt;
+            });
+        });
+
+        // Close modal
+        modal.querySelector('.close-button').addEventListener('click', () => { // Add a close button in your modal HTML
+            modal.style.display = "none";
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+    }
+    */
+});

@@ -1,0 +1,158 @@
+/* --- Global Styles --- */
+:root {
+    --primary-color: #f5dcdb; /* Soft Pink */
+    --secondary-color: #fcf8e3; /* Cream */
+    --text-color: #4a4a4a;
+    --accent-pink: #e0a9a2;
+    --heading-font: 'Playfair Display', serif;
+    --body-font: 'Quicksand', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--body-font);
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    font-family: var(--heading-font);
+}
+
+/* --- Header & Logo --- */
+header {
+    background-color: var(--primary-color);
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-logo {
+    height: 60px;
+    width: auto;
+    border-radius: 50%;
+}
+
+header h1 {
+    font-size: 1.5em;
+    font-family: var(--heading-font);
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+/* --- Hero --- */
+#hero {
+    background-color: var(--primary-color);
+    text-align: center;
+    padding: 60px 0;
+}
+
+/* --- Gallery --- */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.gallery-item {
+    background: #fff;
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-8px);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.item-desc {
+    font-weight: 600;
+    font-size: 0.9em;
+    color: #777;
+}
+
+/* --- Buttons --- */
+.btn-instagram {
+    display: inline-block;
+    background-color: #e1306c;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+.btn-instagram:hover {
+    background-color: #c32aa3;
+    color: #fff;
+}
+
+/* --- Footer --- */
+footer {
+    background: var(--text-color);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+    }
+    .logo-area {
+        margin-bottom: 10px;
+    }
+}
